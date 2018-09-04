@@ -5,7 +5,7 @@ num2 = 2
 num3 = 3
 total = 0
 
-for i in range (0, n + 1):
+for i in range (1, n + 1):
     if i == 1:
         print("1")
     elif i == 2:
