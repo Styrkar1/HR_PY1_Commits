@@ -16,6 +16,6 @@ for i in sp:
         countpunk = countpunk + 1
 
 print("     Upper case     " + str(countup))
-print("     Lower case   " + str(countdown))
+print("     Lower case    " + str(countdown))
 print("         Digits     " + str(countdig))
 print("    Punctuation     " + str(countpunk))
