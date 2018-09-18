@@ -47,7 +47,7 @@ while True:
                     tule = input("Direction: ")
 
         elif tile == 2.2:
-            tule = input("You can travel: (W)est or (S)outh.\nDirection: ")
+            tule = input("You can travel: (S)outh or (W)est.\nDirection: ")
             while tile == 2.2:
                 if tule.upper() == "W":
                     tile = 1.2
