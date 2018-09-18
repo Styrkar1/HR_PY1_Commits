@@ -13,14 +13,15 @@ while True:
                 print("Not a valid direction!")
 
         elif tile == 1.2:
-            tule = input("You can travel: (N)orth or (E)ast or (S)outh")
+            tule = str(input("You can travel: (N)orth or (E)ast or (S)outh"))
             if tule.upper() == "N"
                 print("Direction: N")
                 tile = 1.3
             elif tule.upper() == "E":
                 print("Direction: S")
                 tile = 1.1
-            
+            else:
+                print("Not a valid direction!")
             
         elif tile == 1.3:
             tule = input("You can travel:(E)ast or (S)outh")
@@ -30,12 +31,16 @@ while True:
             elif tule.uppet == "S"
                 print("Direction:S")
                 tile = 1.2
+            else:
+                print("Not a valid direction!")
 
         elif tile == 2.1:
             tule = input("You can travel: (N)orth")
             if tule.upper() == "N":
                 print("Direction: N")
                 tile = 2.2
+            else:
+                print("Not a valid direction!")
 
         elif tile == 2.2:
             tule = input("You can travel: (W)est or (S)outh")
@@ -45,6 +50,8 @@ while True:
             elif tule.upper() == "S":
                 print("Direction: S")
                 tile = 2.1
+            else:
+                print("Not a valid direction!")
 
         elif tile == 2.3:
             tule = input("You can travel: (E)ast or (W)est")
@@ -54,15 +61,19 @@ while True:
             elif tule.upper() == "W":
                 print("Direction: W")
                 tile = 1.3
+            else:
+                print("Not a valid direction!")
 
         elif tile == 3.2:
             tule = input("You can travel: (N)orth or (S)outh")
             if tule.upper() == "N":
                 print("Direction: N")
                 tile = 3.3
-            if tule.upper() == "S":
+            elif tule.upper() == "S":
                 print("Direction: S")
                 tile = 3.1
+            else:
+                print("Not a valid direction!")
 
         elif tile == 3.3:
             tule = input("You can travel: (W)est or (S)outh")
@@ -72,6 +83,8 @@ while True:
             elif tule.upper() = "S":
                 print("Direction: S")
                 tile = 3.2
+            else:
+                print("Not a valid direction!")
 
         else:
             print("Unknown, Breaking")
