@@ -19,7 +19,7 @@ while True:
                 if tule.upper() == "N":
                     tile = 1.3
                 elif tule.upper() == "E":
-                    tile = 1.1
+                    tile = 2.2
                 elif tule.upper() == "S":
                     tile = 1.1
                 else:
