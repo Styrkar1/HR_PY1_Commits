@@ -1,6 +1,5 @@
 tile = 1.1
 while True:
-    print(tile)
     if tile == 3.1:
         print("Victory!")
         break
@@ -24,7 +23,7 @@ while True:
                 print("Not a valid direction!")
             
         elif tile == 1.3:
-            tule = input("You can travel:(E)ast or (S)outh.\nDirection: ")
+            tule = input("You can travel: (E)ast or (S)outh.\nDirection: ")
             if tule.upper() == "E":
                 tile = 2.3
             elif tule.upper() == "S":
@@ -67,7 +66,7 @@ while True:
                 print("Not a valid direction!")
 
         elif tile == 3.3:
-            tule = input("You can travel: (W)est or (S)outh.\nDirection: ")
+            tule = input("You can travel: (S)outh or (W)est.\nDirection: ")
             if tule.upper() == "W":
                 tile = 2.3
             elif tule.upper() == "S":
