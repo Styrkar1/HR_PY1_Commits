@@ -16,10 +16,10 @@ while True:
         continue
 
     else:
-        calc = int(dollar) * (int(nume) / int(denom)
-        print(shares + " shares with market price " + dollar + " " + nume + "/" + denom + " Have value " + calc)
-
-        cont = input("Continue:")
+        calc = 0.0
+        calc = (float(dollar) + (float(nume) / float(denom))) * float(shares)
+        print( "%.2f" % calc)
+        cont = input("Continue: ")
 
         if cont.upper() == "Y":
             continue
