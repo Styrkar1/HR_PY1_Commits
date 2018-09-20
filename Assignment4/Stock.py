@@ -17,12 +17,12 @@ while True:
 
     else:
         calc = int(dollar) * (int(nume) / int(denom)
-        print(shares,"shares with market price " + dollar + " " + nume + "/" + denom + " Have value", calc)
+        print(shares + " shares with market price " + dollar + " " + nume + "/" + denom + " Have value " + calc)
 
         cont = input("Continue:")
 
         if cont.upper() == "Y":
             continue
+
         else:
             break
-    
