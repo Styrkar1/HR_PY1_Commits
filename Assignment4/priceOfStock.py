@@ -1,28 +1,31 @@
 while True:
     while True:
-        shares = input("Number of shares: ")
+        try:
+            shares = int(input("Number of shares: "))
 
-        if shares.isalpha():
-            print("Invalid number!")
+        except ValueError:
+            print("Invalid Number!")
             continue
         else:
             break
+    while True:
+        price = input("Enter a price (dollars, numerator, deniminator): ")
+        dollar, nume, denom = price.split(" ")
 
-    price = input("Enter a price (dollars, numerator, deniminator): ")
-    dollar, nume, denom = price.split(" ")
+        if dollar.isalpha() or denom.isalpha() or nume.isalpha():
+            print("Invalid Price!")
+            continue
 
-    if dollar.isalpha() or denom.isalpha() or nume.isalpha():
-        print("Invalid Price")
+        else:
+            calc = (float(dollar) + (float(nume) / float(denom))) * float(shares)
+            calc = "%.2f" % calc
+            print(str(shares) + " shares with the market price " + str(dollar) + " " + str(nume) + "/" + str(denom) + " have value " + str(calc))
+            break
+
+    cont = input("Continue: ")
+
+    if cont.upper() == "Y":
         continue
 
     else:
-        calc = 0.0
-        calc = (float(dollar) + (float(nume) / float(denom))) * float(shares)
-        print( "%.2f" % calc)
-        cont = input("Continue: ")
-
-        if cont.upper() == "Y":
-            continue
-
-        else:
-            break
+        break
