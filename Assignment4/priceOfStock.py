@@ -1,13 +1,13 @@
 while True:
-    shares = input("Number of shares: ")
+    while True:
+        shares = input("Number of shares: ")
 
-    if shares.isalpha():
-        print("Invalid number!")
-        continue
-    else:
-        break
+        if shares.isalpha():
+            print("Invalid number!")
+            continue
+        else:
+            break
 
-while True:
     price = input("Enter a price (dollars, numerator, deniminator): ")
     dollar, nume, denom = price.split(" ")
 
