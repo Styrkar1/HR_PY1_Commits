@@ -17,7 +17,7 @@ def create_players_dict(filename):
 
             key = "{}{}".format(firstname, lastname).strip()
             value_list = get_value_list()
-            value_list = [int(rank), country, int(rating), int(byear)]
+            #value_list = [int(rank), country, int(rating), int(byear)]
             the_dict[key] = value_list
         filestream.close()
     except FileNotFoundError:
@@ -48,21 +48,26 @@ def get_average_rating(players, dict_players):
     #    rating = value_list[RATING]
     #    ratings.append(rating)
 
-    ratings = [ dict_players[players][RATING] for player in players]
+    ratings = [ dict_players[player][RATING] for player in players ]
     average = sum(ratings)/len(ratings)
     return average
 
 
-def print_sorted(dict_countries):
+def print_sorted(dict_countries, dict_players):
     sorted_tuples = sorted(dict_countries.items())
     for country, players in sorted_tuples:
-        average = get_average_rating(players,country)
+        average = get_average_rating(players, dict_players)
         print("{} ({}) ({:.1f}):".format(country, len(players), average))
 
         for player in players:
             rating = dict_players[player][RATING]
             print("{:>40}{:>10d}".format(player, rating))
     return 
+
+def print_header(header_str):
+    print(header_str)
+    dashes = "-" * len(header_str)
+    print(dashes)
 
 RANK = 0
 COUNTRY = 1
@@ -75,5 +80,8 @@ NUM_ATTRIBUTES = 4
 #   Main Program    #
 filename = input("Enter filename: ")
 dict_players = create_players_dict(filename)
+#print(dict_players)
 dict_countries = create_countries(dict_players)
-print_sorted(dict_countries)
+#print(dict_countries)
+print_header("Players by country:")
+print_sorted(dict_countries, dict_players)
