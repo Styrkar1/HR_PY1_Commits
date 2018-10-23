@@ -1,1 +1,0 @@
-print({k:v for k,v in enumerate(['1','2','3'])})
