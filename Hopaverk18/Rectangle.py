@@ -21,7 +21,7 @@ class Rectangle():
     def __eq__(self,other):
         if self.area == other.area:
             return True
-        elif self.area != other.area:
+        else:
             return False
 
     def __str__(self):
